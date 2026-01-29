@@ -22,4 +22,4 @@ COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 
 EXPOSE 3001
-CMD ["npm", "run", "start", "-p", "3001"]
+CMD ["npm", "run", "start", "--", "-p", "3001"]
